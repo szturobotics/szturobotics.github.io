@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="OriginMind AI OS 是面向多形态机器人、正在研发的 AI 操作系统，致力于在应用与机器人硬件之间构建统一智能层。"
+    >
+    <meta name="theme-color" content="#07111f">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="OriginMind AI OS｜机器人 AI 操作系统">
+    <meta
+      property="og:description"
+      content="The Intelligence Layer Between Applications and Robot Hardware. Build Once. Deploy Everywhere."
+    >
+    <meta property="og:url" content="https://szturobotics.github.io/">
+    <link rel="canonical" href="https://szturobotics.github.io/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <title>OriginMind AI OS｜机器人 AI 操作系统</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <div class="site-background" aria-hidden="true">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+      <div class="grid-plane"></div>
+    </div>
+
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="OriginMind 首页">
+          <span class="brand-symbol" aria-hidden="true">
+            <span class="brand-core"></span>
+          </span>
+          <span class="brand-copy">
+            <strong>OriginMind</strong>
+            <small>AI OS</small>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="打开导航菜单"
+          data-menu-toggle
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="site-navigation" aria-label="主导航" data-nav>
+          <a href="#platform">平台</a>
+          <a href="#architecture">架构</a>
+          <a href="#robots">机器人</a>
+          <a href="#solutions">行业方案</a>
+          <a href="#company">关于我们</a>
+        </nav>
+
+        <a class="header-cta" href="mailto:sales@originmindos.cn">联系合作</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section" id="top">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span></span> THE ROBOT AI OPERATING SYSTEM</p>
+            <h1>
+              机器人需要智能<br>
+              <span>智能需要操作系统</span>
+            </h1>
+            <p class="hero-lead">
+              OriginMind AI OS 正在构建应用与机器人硬件之间的统一智能层，
+              目标是将任务理解、规划、技能、记忆、执行与反馈组织为可部署、可复用、可演进的机器人自主系统。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#platform">
+                探索 OriginMind
+                <span aria-hidden="true">→</span>
+              </a>
+              <a class="button button-secondary" href="mailto:sales@originmindos.cn">
+                商务与技术合作
+              </a>
+            </div>
+            <ul class="hero-principles">
+              <li>
+                <strong>Build Once</strong>
+                <span>一次构建</span>
+              </li>
+              <li>
+                <strong>Deploy Everywhere</strong>
+                <span>多端部署</span>
+              </li>
+              <li>
+                <strong>Closed-loop Autonomy</strong>
+                <span>闭环自主</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-system reveal" role="img" aria-label="OriginMind AI OS 系统示意图">
+            <div class="system-window">
+              <div class="window-bar">
+                <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                <span>ORIGINMIND / REFERENCE ARCHITECTURE</span>
+                <b>DESIGN</b>
+              </div>
+              <div class="system-content">
+                <div class="mission-line">
+                  <span>MISSION</span>
+                  <strong>Inspect equipment and report anomalies</strong>
+                  <i aria-hidden="true"></i>
+                </div>
+                <div class="os-stack">
+                  <div class="stack-row stack-agent">
+                    <span class="stack-index">01</span>
+                    <div><small>COGNITION</small><strong>Agent &amp; Planning</strong></div>
+                    <em>Goal → Task Graph</em>
+                  </div>
+                  <div class="stack-row stack-context">
+                    <span class="stack-index">02</span>
+                    <div><small>CONTEXT</small><strong>Memory &amp; World Model</strong></div>
+                    <em>State → Evidence</em>
+                  </div>
+                  <div class="stack-row stack-skills">
+                    <span class="stack-index">03</span>
+                    <div><small>CAPABILITY</small><strong>Skill Framework</strong></div>
+                    <em>Discover → Compose</em>
+                  </div>
+                  <div class="stack-row stack-runtime">
+                    <span class="stack-index">04</span>
+                    <div><small>EXECUTION</small><strong>Robot Runtime</strong></div>
+                    <em>Guard → Recover</em>
+                  </div>
+                </div>
+                <div class="robot-bus">
+                  <span>ROS 2</span><span>Vendor SDK</span><span>Edge Runtime</span>
+                  <div class="bus-signal" aria-hidden="true"></div>
+                </div>
+                <div class="system-status">
+                  <div><i></i><span>Perception</span><b>ADAPTER</b></div>
+                  <div><i></i><span>Navigation</span><b>ADAPTER</b></div>
+                  <div><i></i><span>Manipulation</span><b>ADAPTER</b></div>
+                </div>
+              </div>
+            </div>
+            <div class="floating-chip chip-one">TASK SESSION <b>DESIGN</b></div>
+            <div class="floating-chip chip-two">FEEDBACK <b>LOOP</b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="intelligence-strip" aria-label="OriginMind 定位">
+        <div class="container strip-inner">
+          <p>APPLICATIONS</p><span>→</span><strong>ORIGINMIND AI OS</strong><span>→</span><p>ROBOT HARDWARE</p>
+        </div>
+      </section>
+
+      <section class="section platform" id="platform">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow"><span></span> ONE INTELLIGENCE LAYER</p>
+              <h2>让机器人能力从项目走向平台</h2>
+            </div>
+            <p>
+              我们致力于把分散在不同本体、场景与项目中的智能能力，沉淀为统一接口、可组合技能与可持续运行的系统资产。
+            </p>
+          </div>
+
+          <p class="evidence-note reveal">
+            产品边界说明：以下内容为 OriginMind 的目标架构与研发路线；各模块将依据真机实验、量化指标和场景验证逐步交付。
+          </p>
+
+          <div class="module-grid">
+            <article class="module-card module-featured reveal">
+              <div class="module-number">01</div>
+              <div class="module-icon agent-icon" aria-hidden="true"><i></i><i></i><i></i></div>
+              <p class="module-kicker">AGENT &amp; PLANNING</p>
+              <h3>从自然语言目标到可执行任务</h3>
+              <p>理解目标、生成任务图、调度技能，并依据现场反馈持续重规划。</p>
+              <ul>
+                <li>Goal Compilation</li>
+                <li>Task Graph</li>
+                <li>Recovery Planning</li>
+              </ul>
+            </article>
+
+            <article class="module-card reveal">
+              <div class="module-number">02</div>
+              <p class="module-kicker">MEMORY</p>
+              <h3>持续任务记忆</h3>
+              <p>记录任务状态、执行证据与经验，让机器人跨步骤、跨会话保持上下文。</p>
+            </article>
+
+            <article class="module-card reveal">
+              <div class="module-number">03</div>
+              <p class="module-kicker">WORLD MODEL</p>
+              <h3>面向行动的世界模型</h3>
+              <p>融合感知、地图、对象与约束，为规划和执行提供可查询的环境状态。</p>
+            </article>
+
+            <article class="module-card reveal">
+              <div class="module-number">04</div>
+              <p class="module-kicker">SKILL FRAMEWORK</p>
+              <h3>标准化技能系统</h3>
+              <p>用统一接口封装导航、感知、操作与检测能力，支持发现、组合、测试和版本管理。</p>
+            </article>
+
+            <article class="module-card reveal">
+              <div class="module-number">05</div>
+              <p class="module-kicker">ROBOT RUNTIME</p>
+              <h3>可靠执行与安全守护</h3>
+              <p>在边缘端管理任务生命周期、权限、执行监控、异常恢复与独立验证。</p>
+            </article>
+
+            <article class="module-card reveal">
+              <div class="module-number">06</div>
+              <p class="module-kicker">SDK &amp; API</p>
+              <h3>面向开发者的统一入口</h3>
+              <p>连接 ROS 2、厂商 SDK 与业务应用，降低跨机器人集成和二次开发成本。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section architecture" id="architecture">
+        <div class="container architecture-grid">
+          <div class="architecture-copy reveal">
+            <p class="eyebrow"><span></span> CLOSED-LOOP AUTONOMY</p>
+            <h2>不是一次调用，而是完整任务闭环</h2>
+            <p>
+              OriginMind 的目标设计以持续 Task Session 管理机器人完整工作过程：从目标进入系统，到任务执行、证据验证、失败恢复，再到经验沉淀。
+            </p>
+            <div class="architecture-points">
+              <div><span>01</span><p><strong>可解释</strong>任务图、状态与证据全程可追踪</p></div>
+              <div><span>02</span><p><strong>可恢复</strong>执行失败后重试、降级或重新规划</p></div>
+              <div><span>03</span><p><strong>可扩展</strong>技能与机器人适配器按需接入</p></div>
+              <div><span>04</span><p><strong>可治理</strong>权限、安全边界与生命周期受控</p></div>
+            </div>
+          </div>
+
+          <div class="loop-visual reveal" role="img" aria-label="闭环自主任务流程">
+            <div class="loop-center">
+              <small>ORIGINMIND</small>
+              <strong>TASK<br>SESSION</strong>
+              <span>STATEFUL / GUARDED</span>
+            </div>
+            <div class="loop-node node-one"><b>01</b><strong>UNDERSTAND</strong><span>理解目标</span></div>
+            <div class="loop-node node-two"><b>02</b><strong>PLAN</strong><span>任务规划</span></div>
+            <div class="loop-node node-three"><b>03</b><strong>EXECUTE</strong><span>技能执行</span></div>
+            <div class="loop-node node-four"><b>04</b><strong>VERIFY</strong><span>结果验证</span></div>
+            <div class="loop-node node-five"><b>05</b><strong>LEARN</strong><span>记忆沉淀</span></div>
+            <div class="loop-orbit orbit-one"></div>
+            <div class="loop-orbit orbit-two"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section robots" id="robots">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow"><span></span> MULTI-ROBOT DEPLOYMENT</p>
+              <h2>硬件开放，智能统一</h2>
+            </div>
+            <p>计划通过标准技能接口与机器人适配层，让同一套上层智能跨不同本体、计算平台与控制系统部署。</p>
+          </div>
+
+          <div class="robot-stage reveal">
+            <div class="robot-types">
+              <div class="robot-type is-active"><span>W</span><strong>轮式机器人</strong><small>WHEELED</small></div>
+              <div class="robot-type"><span>T</span><strong>履带机器人</strong><small>TRACKED</small></div>
+              <div class="robot-type"><span>Q</span><strong>四足机器人</strong><small>QUADRUPED</small></div>
+              <div class="robot-type"><span>H</span><strong>人形机器人</strong><small>HUMANOID</small></div>
+              <div class="robot-type"><span>A</span><strong>双臂机器人</strong><small>DUAL-ARM</small></div>
+            </div>
+            <div class="deployment-line">
+              <div><span>Business App</span><small>业务应用</small></div>
+              <i></i>
+              <div class="deployment-core"><span>OriginMind AI OS</span><small>统一智能层</small></div>
+              <i></i>
+              <div><span>Robot Adapter</span><small>本体适配</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section solutions" id="solutions">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <p class="eyebrow"><span></span> FROM PLATFORM TO FIELD</p>
+              <h2>面向真实现场的自主系统</h2>
+            </div>
+            <p>围绕复杂环境中的自主移动、环境理解、设备操作与任务交付，探索可复制的行业解决方案。</p>
+          </div>
+
+          <div class="solution-grid">
+            <article class="solution-card reveal">
+              <div class="solution-art art-mine" aria-hidden="true">
+                <span></span><span></span><span></span><i></i>
+              </div>
+              <div class="solution-body">
+                <small>01 / MINING &amp; ENERGY</small>
+                <h3>矿区与能源巡检</h3>
+                <p>面向无 GNSS、弱通信与复杂地形环境，实现自主导航、设备识别、状态检测和异常上报。</p>
+                <ul><li>无 GNSS 多源融合定位</li><li>全地形风险感知规划</li><li>闭环巡检任务执行</li></ul>
+              </div>
+            </article>
+
+            <article class="solution-card reveal">
+              <div class="solution-art art-industry" aria-hidden="true">
+                <span></span><span></span><span></span><i></i>
+              </div>
+              <div class="solution-body">
+                <small>02 / INDUSTRIAL FACILITY</small>
+                <h3>工业设施自主作业</h3>
+                <p>让机器人根据自然语言任务，自主到达设备并完成按钮、旋钮、插拔、读表或检测操作。</p>
+                <ul><li>自然语言任务编排</li><li>导航与操作协同</li><li>失败恢复与重规划</li></ul>
+              </div>
+            </article>
+
+            <article class="solution-card reveal">
+              <div class="solution-art art-oem" aria-hidden="true">
+                <span></span><span></span><span></span><i></i>
+              </div>
+              <div class="solution-body">
+                <small>03 / OEM &amp; DEVELOPERS</small>
+                <h3>机器人智能升级</h3>
+                <p>为机器人厂商和行业集成商提供 Runtime、SDK、技能库与适配服务，加快智能产品落地。</p>
+                <ul><li>OEM 软件集成</li><li>技能与应用开发</li><li>边缘部署与运维</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section company" id="company">
+        <div class="container company-panel reveal">
+          <div class="company-mark" aria-hidden="true">
+            <div class="company-ring ring-one"></div>
+            <div class="company-ring ring-two"></div>
+            <div class="company-core">OM</div>
+          </div>
+          <div class="company-copy">
+            <p class="eyebrow"><span></span> ABOUT ORIGINMIND</p>
+            <h2>构建机器人时代的智能基础设施</h2>
+            <p>
+              深圳源灵智能科技有限公司聚焦机器人 AI 操作系统与自主系统平台研发。
+              我们致力于连接通用人工智能、机器人技能与多形态硬件，让机器人从“能执行单点功能”走向“能完成复杂任务”。
+            </p>
+            <div class="company-values">
+              <span>统一接口</span><span>跨本体部署</span><span>任务闭环</span><span>安全执行</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container contact-panel reveal">
+          <div>
+            <p class="eyebrow"><span></span> BUILD THE NEXT ROBOT SYSTEM</p>
+            <h2>与 OriginMind 一起，让智能真正进入机器人</h2>
+            <p>欢迎机器人厂商、行业客户、科研机构与生态伙伴联系我们。</p>
+          </div>
+          <a class="button button-light" href="mailto:sales@originmindos.cn">
+            sales@originmindos.cn <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="brand" href="#top" aria-label="OriginMind 返回顶部">
+          <span class="brand-symbol" aria-hidden="true"><span class="brand-core"></span></span>
+          <span class="brand-copy"><strong>OriginMind</strong><small>AI OS</small></span>
+        </a>
+        <p>机器人 AI 操作系统 · The Robot AI Operating System</p>
+        <a href="mailto:sales@originmindos.cn">sales@originmindos.cn</a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span data-year></span> 深圳源灵智能科技有限公司</span>
+        <span>Build Once. Deploy Everywhere.</span>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,4 +1,13 @@
 (() => {
+  const languageLinks = document.querySelectorAll("[data-language]");
+  const currentHash = window.location.hash;
+  languageLinks.forEach((link) => {
+    const language = link.dataset.language;
+    if (language !== "en" && language !== "zh") return;
+    link.href = `/${language}/${currentHash}`;
+    link.hreflang = language === "zh" ? "zh-CN" : "en";
+  });
+
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.querySelector(".site-nav");
   if (!toggle || !nav) return;

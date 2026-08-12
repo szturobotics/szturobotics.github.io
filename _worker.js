@@ -5,6 +5,17 @@ function isChinese(hostname) {
   return hostname === "originmindos.cn" || hostname.endsWith(".originmindos.cn");
 }
 
+function languageFromPath(pathname) {
+  const match = pathname.match(/^\/(en|zh)(?:\/|$)/);
+  return match ? match[1] : null;
+}
+
+function languageForRequest(url) {
+  const requested = url.searchParams.get("lang");
+  if (requested === "en" || requested === "zh") return requested;
+  return languageFromPath(url.pathname) || (isChinese(url.hostname.toLowerCase()) ? "zh" : "en");
+}
+
 function canonicalHost(hostname) {
   if (hostname === "originmindos.com") return ENGLISH_HOST;
   if (hostname === "originmindos.cn") return CHINESE_HOST;
@@ -21,7 +32,10 @@ function assetRequest(request, pathname) {
 function withSiteHeaders(response, language) {
   const headers = new Headers(response.headers);
   headers.set("Content-Language", language === "zh" ? "zh-CN" : "en");
-  headers.set("Vary", "Host");
+  const vary = headers.get("Vary");
+  if (!vary || !vary.split(",").some((value) => value.trim().toLowerCase() === "host")) {
+    headers.set("Vary", vary ? `${vary}, Host` : "Host");
+  }
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
@@ -38,7 +52,12 @@ export default {
       return Response.redirect(url.toString(), 308);
     }
 
-    const language = isChinese(url.hostname.toLowerCase()) ? "zh" : "en";
+    if (url.pathname === "/en" || url.pathname === "/zh") {
+      url.pathname += "/";
+      return Response.redirect(url.toString(), 308);
+    }
+
+    const language = languageForRequest(url);
     if (url.pathname === "/" || url.pathname === "/index.html") {
       const response = await env.ASSETS.fetch(assetRequest(request, language === "zh" ? "/zh/" : "/en/"));
       return withSiteHeaders(response, language);

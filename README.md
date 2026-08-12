@@ -1,11 +1,9 @@
-# OriginMind AI OS Website
+# OriginMind OS Website
 
-Official website for **OriginMind AI OS**, developed by 深圳源灵智能科技有限公司.
+One repository and one bilingual website program for OriginMind OS.
 
-## Website
+- English: https://www.originmindos.com/
+- 中文: https://www.originmindos.cn/
+- Contact: sales@originmindos.cn
 
-https://szturobotics.github.io
-
-## Contact
-
-sales@originmindos.cn
+Cloudflare Pages reads the request host in `_worker.js` and serves the matching language from the same deployment. English and Chinese pages are generated from the same component and shared stylesheet.

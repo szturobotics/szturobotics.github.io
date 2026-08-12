@@ -20,8 +20,16 @@
     nav.classList.toggle("is-open", open);
     document.body.classList.toggle("menu-open", open);
   };
-  toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
-  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => setOpen(false)));
-  document.addEventListener("keydown", (event) => { if (event.key === "Escape") setOpen(false); });
-  window.addEventListener("resize", () => { if (window.innerWidth > 900) setOpen(false); });
+  toggle.addEventListener("click", () =>
+    setOpen(toggle.getAttribute("aria-expanded") !== "true"),
+  );
+  nav
+    .querySelectorAll("a")
+    .forEach((link) => link.addEventListener("click", () => setOpen(false)));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) setOpen(false);
+  });
 })();

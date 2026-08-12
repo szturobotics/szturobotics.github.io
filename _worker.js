@@ -2,7 +2,9 @@ const ENGLISH_HOST = "www.originmindos.com";
 const CHINESE_HOST = "www.originmindos.cn";
 
 function isChinese(hostname) {
-  return hostname === "originmindos.cn" || hostname.endsWith(".originmindos.cn");
+  return (
+    hostname === "originmindos.cn" || hostname.endsWith(".originmindos.cn")
+  );
 }
 
 function languageFromPath(pathname) {
@@ -13,7 +15,10 @@ function languageFromPath(pathname) {
 function languageForRequest(url) {
   const requested = url.searchParams.get("lang");
   if (requested === "en" || requested === "zh") return requested;
-  return languageFromPath(url.pathname) || (isChinese(url.hostname.toLowerCase()) ? "zh" : "en");
+  return (
+    languageFromPath(url.pathname) ||
+    (isChinese(url.hostname.toLowerCase()) ? "zh" : "en")
+  );
 }
 
 function canonicalHost(hostname) {
@@ -33,14 +38,21 @@ function withSiteHeaders(response, language) {
   const headers = new Headers(response.headers);
   headers.set("Content-Language", language === "zh" ? "zh-CN" : "en");
   const vary = headers.get("Vary");
-  if (!vary || !vary.split(",").some((value) => value.trim().toLowerCase() === "host")) {
+  if (
+    !vary ||
+    !vary.split(",").some((value) => value.trim().toLowerCase() === "host")
+  ) {
     headers.set("Vary", vary ? `${vary}, Host` : "Host");
   }
   headers.set("X-Content-Type-Options", "nosniff");
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
   headers.set("X-Frame-Options", "SAMEORIGIN");
-  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
 }
 
 export default {
@@ -59,16 +71,23 @@ export default {
 
     const language = languageForRequest(url);
     if (url.pathname === "/" || url.pathname === "/index.html") {
-      const response = await env.ASSETS.fetch(assetRequest(request, language === "zh" ? "/zh/" : "/en/"));
+      const response = await env.ASSETS.fetch(
+        assetRequest(request, language === "zh" ? "/zh/" : "/en/"),
+      );
       return withSiteHeaders(response, language);
     }
 
     const response = await env.ASSETS.fetch(request);
-    if (response.status !== 404 || request.headers.get("accept")?.includes("text/html") !== true) {
+    if (
+      response.status !== 404 ||
+      request.headers.get("accept")?.includes("text/html") !== true
+    ) {
       return withSiteHeaders(response, language);
     }
 
-    const fallback = await env.ASSETS.fetch(assetRequest(request, language === "zh" ? "/errors/zh/" : "/errors/en/"));
+    const fallback = await env.ASSETS.fetch(
+      assetRequest(request, language === "zh" ? "/errors/zh/" : "/errors/en/"),
+    );
     const headers = new Headers(fallback.headers);
     headers.set("Content-Language", language === "zh" ? "zh-CN" : "en");
     headers.set("Cache-Control", "no-store");

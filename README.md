@@ -4,7 +4,7 @@ Official website for **OriginMind AI OS**, developed by 深圳源灵智能科技
 
 ## Website
 
-https://szturobotics.github.io
+https://originmindos.com
 
 ## Contact
 

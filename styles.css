@@ -1683,3 +1683,366 @@ button {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Readability upgrade: larger type, calmer density, and clearer hierarchy. */
+body {
+  font-size: 17px;
+}
+
+.brand-copy strong {
+  font-size: 21px;
+}
+
+.brand-copy small {
+  font-size: 11px;
+}
+
+.site-nav a {
+  font-size: 16px;
+}
+
+.header-cta {
+  min-height: 44px;
+  padding-inline: 20px;
+  font-size: 15px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: 0.14em;
+}
+
+.hero-lead {
+  max-width: 700px;
+  font-size: clamp(18px, 1.65vw, 21px);
+  line-height: 1.85;
+}
+
+.button {
+  min-height: 56px;
+  padding-inline: 25px;
+  font-size: 16px;
+}
+
+.hero-principles strong {
+  font-size: 14px;
+}
+
+.hero-principles span {
+  font-size: 14px;
+}
+
+.window-bar,
+.window-bar b {
+  font-size: 10px;
+}
+
+.window-bar {
+  min-height: 48px;
+}
+
+.mission-line {
+  min-height: 58px;
+}
+
+.mission-line span {
+  font-size: 10px;
+}
+
+.mission-line strong {
+  font-size: 12px;
+}
+
+.stack-row {
+  min-height: 76px;
+}
+
+.stack-index {
+  font-size: 11px;
+}
+
+.stack-row small {
+  font-size: 9px;
+}
+
+.stack-row strong {
+  font-size: 15px;
+}
+
+.stack-row em {
+  font-size: 10px;
+}
+
+.robot-bus {
+  min-height: 46px;
+  font-size: 10px;
+}
+
+.system-status span,
+.system-status b {
+  font-size: 9px;
+}
+
+.floating-chip {
+  font-size: 9px;
+}
+
+.strip-inner p,
+.strip-inner strong {
+  font-size: 13px;
+}
+
+.section-heading > p,
+.architecture-copy > p,
+.company-copy > p {
+  font-size: clamp(17px, 1.4vw, 19px);
+  line-height: 1.85;
+}
+
+.evidence-note {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.module-card {
+  min-height: 335px;
+}
+
+.module-number {
+  font-size: 13px;
+}
+
+.module-kicker {
+  font-size: 11px;
+}
+
+.module-card h3 {
+  font-size: 24px;
+}
+
+.module-card > p:last-of-type {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.module-card li {
+  font-size: 10px;
+}
+
+.architecture-points span {
+  font-size: 11px;
+}
+
+.architecture-points p {
+  font-size: 15px;
+}
+
+.architecture-points strong {
+  font-size: 17px;
+}
+
+.loop-center small,
+.loop-center span {
+  font-size: 9px;
+}
+
+.loop-center strong {
+  font-size: 22px;
+}
+
+.loop-node b {
+  font-size: 11px;
+}
+
+.loop-node strong {
+  font-size: 11px;
+}
+
+.loop-node span {
+  font-size: 10px;
+}
+
+.robot-type {
+  min-height: 205px;
+}
+
+.robot-type strong {
+  font-size: 16px;
+}
+
+.robot-type small {
+  font-size: 9px;
+}
+
+.deployment-line span {
+  font-size: 12px;
+}
+
+.deployment-line small {
+  font-size: 11px;
+}
+
+.solution-body > small {
+  font-size: 10px;
+}
+
+.solution-body h3 {
+  font-size: 25px;
+}
+
+.solution-body p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.solution-body li {
+  font-size: 14px;
+}
+
+.company-values span {
+  font-size: 13px;
+}
+
+.contact-panel p:last-child {
+  font-size: 17px;
+}
+
+.footer-main p {
+  font-size: 14px;
+}
+
+.footer-main > a:last-child {
+  font-size: 13px;
+}
+
+.footer-bottom {
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .site-nav a {
+    font-size: 18px;
+  }
+
+  .solution-card {
+    grid-template-columns: 0.7fr 1.3fr;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .brand-copy strong {
+    font-size: 19px;
+  }
+
+  .brand-copy small {
+    font-size: 10px;
+  }
+
+  .eyebrow {
+    margin-bottom: 18px;
+    font-size: 12px;
+  }
+
+  .hero-lead {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .button {
+    min-height: 56px;
+    font-size: 16px;
+  }
+
+  .hero-principles strong,
+  .hero-principles span {
+    font-size: 14px;
+  }
+
+  .window-bar,
+  .window-bar b,
+  .mission-line span {
+    font-size: 9px;
+  }
+
+  .mission-line strong {
+    font-size: 11px;
+  }
+
+  .stack-row strong {
+    font-size: 14px;
+  }
+
+  .stack-row small,
+  .stack-index,
+  .robot-bus,
+  .system-status span,
+  .system-status b {
+    font-size: 9px;
+  }
+
+  .strip-inner p,
+  .strip-inner strong {
+    font-size: 12px;
+  }
+
+  .section-heading > p,
+  .architecture-copy > p,
+  .company-copy > p {
+    font-size: 17px;
+  }
+
+  .module-card {
+    min-height: 300px;
+  }
+
+  .module-card h3 {
+    font-size: 23px;
+  }
+
+  .module-card > p:last-of-type {
+    font-size: 16px;
+  }
+
+  .loop-center strong {
+    font-size: 17px;
+  }
+
+  .loop-node {
+    min-width: 112px;
+  }
+
+  .loop-node b,
+  .loop-node strong,
+  .loop-node span {
+    font-size: 9px;
+  }
+
+  .robot-type strong {
+    font-size: 15px;
+  }
+
+  .robot-type small {
+    font-size: 9px;
+  }
+
+  .solution-body h3 {
+    font-size: 24px;
+  }
+
+  .solution-body p {
+    font-size: 16px;
+  }
+
+  .company-values span {
+    font-size: 13px;
+  }
+
+  .contact-panel p:last-child {
+    font-size: 16px;
+  }
+}
